@@ -545,7 +545,7 @@ if (typeof BEM === 'undefined') {
          * Default handler for errors in decls
          */
         _declErrorHandler: function (err) {
-            console.error(err);
+            console.error(err instanceof Error ? err.stack : err);
         }
     };
     BEM.JSON = {
